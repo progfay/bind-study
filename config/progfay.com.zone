@@ -1,14 +1,24 @@
 $ORIGIN progfay.com.
 $TTL 3600       ; 1 hour
-@ IN SOA ns1.progfay.com. postmaster.progfay.com. (
-        2020111801  ; Serial
+@ IN SOA ns1.progfay.com. mail.progfay.com. (
+        2021032500  ; Serial
         3600        ; Refresh
         1200        ; Retry
         1209600     ; Expire
         900         ; Minimum
-        )
-@       IN  NS      ns1.progfay.com.
+)
 
-ns1     IN  A       192.168.1.2
-dev     IN  A       192.168.1.3
+@       IN  NS      ns1
+ns1     IN  A       192.168.0.0
+@       IN  A       192.168.1.0
+        IN  A       192.168.1.1
+        IN  A       192.168.1.2
+        IN  A       192.168.1.3
+        IN  A       192.168.1.4
+        IN  A       192.168.1.5
+        IN  A       192.168.1.6
+        IN  A       192.168.1.7
+        IN  A       192.168.1.8
+        IN  A       192.168.1.9
+dev     IN  A       192.168.2.0
 www     IN  CNAME   dev
