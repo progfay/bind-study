@@ -1,0 +1,9 @@
+version: "3"
+services:
+  authoritative:
+    build: ./authoritative
+
+  fullresolver:
+    build: ./fullresolver
+    ports:
+      - 53:53/udp
