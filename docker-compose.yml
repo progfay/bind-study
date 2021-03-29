@@ -2,8 +2,19 @@ version: "3"
 services:
   authoritative:
     build: ./authoritative
-
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.2
   fullresolver:
     build: ./fullresolver
     ports:
       - 53:53/udp
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.3
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.0.0/24

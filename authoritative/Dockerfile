@@ -9,4 +9,4 @@ ADD ./config/named.conf /etc/bind/named.conf
 ADD ./config/auth.com.zone /etc/bind/auth.com.zone
 
 EXPOSE 53 953
-ENTRYPOINT [ "/usr/sbin/named", "-g", "-c", "/etc/bind/named.conf" ]
+ENTRYPOINT [ "/usr/sbin/named", "-g", "-4", "-c", "/etc/bind/named.conf" ]
