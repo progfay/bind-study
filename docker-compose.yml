@@ -1,17 +1,22 @@
 version: "3"
 services:
-  authoritative:
-    build: ./authoritative
+  root:
+    build: ./root
     networks:
       app_net:
         ipv4_address: 10.10.0.2
+  com:
+    build: ./com
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.3
   fullresolver:
     build: ./fullresolver
     ports:
       - 53:53/udp
     networks:
       app_net:
-        ipv4_address: 10.10.0.3
+        ipv4_address: 10.10.0.4
 networks:
   app_net:
     driver: bridge

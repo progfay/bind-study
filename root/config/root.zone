@@ -1,0 +1,19 @@
+$ORIGIN .
+$TTL 3600       ; 1 hour
+@ IN SOA ns1. mail. (
+        2015012902  ; serial
+        3600        ; refresh (1 hour)
+        1200        ; retry (20 min.)
+        1209600     ; expire (2 weeks)
+        900         ; minimum (15 min.)
+        )
+@        IN  NS      ns1.com.
+@        IN  MX      10 mail.com.
+@        IN  TXT     "v=spf1 mx ~all"    ; TXT
+@        IN  SPF     "v=spf1 mx ~all"    ; SPF
+
+@        IN NS       com.
+com      IN A        10.10.0.3
+
+ns1      IN  A       192.168.1.2
+mail     IN  A       192.168.1.4
