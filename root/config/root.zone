@@ -1,3 +1,4 @@
+$ORIGIN .
 $TTL 3600       ; 1 hour
 @ IN SOA ns1. mail. (
         2015012902  ; serial
@@ -14,5 +15,5 @@ $TTL 3600       ; 1 hour
 ns1      IN  A       192.168.1.2
 mail     IN  A       192.168.1.4
 
-@        IN  NS       com.
-com      IN  A        10.10.0.3
+@        IN  NS      ns1.com.
+ns1.com  IN  A       10.10.0.3

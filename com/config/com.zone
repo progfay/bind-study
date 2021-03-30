@@ -1,4 +1,5 @@
 $ORIGIN com.
+$TTL 3600       ; 1 hour
 @ IN SOA ns1.com. mail.com. (
         2015012902  ; serial
         3600        ; refresh (1 hour)
