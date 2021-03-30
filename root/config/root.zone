@@ -12,7 +12,7 @@ $TTL 3600       ; 1 hour
 @        IN  TXT     "v=spf1 mx ~all"    ; TXT
 @        IN  SPF     "v=spf1 mx ~all"    ; SPF
 
-ns1      IN  A       192.168.1.2
+ns1      IN  A       10.10.0.2
 mail     IN  A       192.168.1.4
 
 com      IN  NS      ns1.com.
