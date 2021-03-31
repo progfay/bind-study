@@ -7,5 +7,4 @@ RUN rndc-confgen -a && chown root:root rndc.key
 ADD ./config/named.conf /etc/bind/named.conf
 ADD ./config/root.zone /etc/bind/root.zone
 
-EXPOSE 53 953
 ENTRYPOINT [ "/usr/sbin/named", "-g", "-4", "-c", "/etc/bind/named.conf" ]
