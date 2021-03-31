@@ -6,5 +6,7 @@ WORKDIR /etc/bind
 RUN rndc-confgen -a && chown root:root rndc.key
 ADD ./config/named.conf /etc/bind/named.conf
 ADD ./config/com.zone /etc/bind/com.zone
+ADD ./config/sign.sh /etc/bind/sign.sh
+RUN /etc/bind/sign.sh
 
 ENTRYPOINT [ "/usr/sbin/named", "-g", "-4", "-c", "/etc/bind/named.conf" ]
