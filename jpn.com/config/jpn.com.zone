@@ -10,12 +10,8 @@ $TTL 3600       ; 1 hour
 
 @        IN  NS      ns1.jpn.com.
 @        IN  MX      10 mail.jpn.com.
-@        IN  TXT     "v=spf1 mx ~all"    ; TXT
-@        IN  SPF     "v=spf1 mx ~all"    ; SPF
-
 ns1      IN  A       10.10.0.5
-mail     IN  A       192.168.1.4
-auth     IN  A       192.168.1.5
+mail     IN  A       192.168.5.1
+
+auth     IN  A       192.168.5.2
 www.auth IN  CNAME   auth
-progfay  IN  A       192.168.1.6
-google   IN  A       192.168.1.7

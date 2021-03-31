@@ -7,13 +7,11 @@ $TTL 3600       ; 1 hour
         1209600     ; expire (2 weeks)
         900         ; minimum (15 min.)
         )
+
 @        IN  NS      ns1.
 @        IN  MX      10 mail.
-@        IN  TXT     "v=spf1 mx ~all"    ; TXT
-@        IN  SPF     "v=spf1 mx ~all"    ; SPF
-
 ns1      IN  A       10.10.0.2
-mail     IN  A       192.168.1.4
+mail     IN  A       192.168.2.1
 
 com      IN  NS      ns1.com.
 ns1.com  IN  A       10.10.0.3
