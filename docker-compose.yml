@@ -10,6 +10,11 @@ services:
     networks:
       app_net:
         ipv4_address: 10.10.0.3
+  jpn.com:
+    build: ./jpn.com
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.5
   fullresolver:
     build: ./fullresolver
     ports:
